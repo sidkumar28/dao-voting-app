@@ -20,18 +20,20 @@ interface ProposalDrawerProps {
 const ProposalDrawer: React.FC<ProposalDrawerProps> = ({ open, onClose, proposal }) => {
   return (
     <Drawer open={open} onOpenChange={onClose}>
-      <DrawerContent>
-        <DrawerHeader>
-          <DrawerTitle>{proposal?.title}</DrawerTitle>
-          <DrawerDescription>{proposal?.description}</DrawerDescription>
-        </DrawerHeader>
-        <DrawerFooter>
-          <Button onClick={() => alert('Vote submitted!')}>Vote</Button>
-          <DrawerClose asChild>
-            <Button variant="outline" onClick={onClose}>Close</Button>
-          </DrawerClose>
-        </DrawerFooter>
-      </DrawerContent>
+      {proposal && (
+        <DrawerContent>
+          <DrawerHeader>
+            <DrawerTitle>{proposal.title}</DrawerTitle>
+            <DrawerDescription>{proposal.description}</DrawerDescription>
+          </DrawerHeader>
+          <DrawerFooter>
+            <Button onClick={() => alert('Vote submitted!')}>Vote</Button>
+            <DrawerClose asChild>
+              <Button variant="outline" onClick={onClose}>Close</Button>
+            </DrawerClose>
+          </DrawerFooter>
+        </DrawerContent>
+      )}
     </Drawer>
   );
 };

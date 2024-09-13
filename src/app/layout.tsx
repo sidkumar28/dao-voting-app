@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-gradient-to-b from-[#051937] via-[#004d7a] to-[#008793] min-h-screen`}>
+      <body className={`${inter.className} bg-gradient-to-b from-[#181D47] via-[#243465] to-[#2A174F] min-h-screen`}>
         
         <div className="flex flex-col min-h-screen relative z-0">
           <Header />

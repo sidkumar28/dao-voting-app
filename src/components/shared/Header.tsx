@@ -13,12 +13,12 @@ const Header = () => {
       }}
     >
       <div className="flex items-center space-x-4">
-        {/* <img 
+        {<img 
           src="/images/logo.png" 
           alt="Logo"
           className="h-8 w-auto" 
-        /> */}
-        <div className="text-4xl font-bold">DAO</div>
+        />}
+        
       </div>
 
       

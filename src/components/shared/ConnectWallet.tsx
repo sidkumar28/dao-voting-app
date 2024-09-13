@@ -38,7 +38,7 @@ const ConnectWallet = () => {
     <div>
       <button
         onClick={connectWalletHandler}
-        className="bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-500 text-white text-xl px-4 py-2 rounded-3xl flex items-center justify-center w-52 h-16 text-center overflow-hidden"
+        className="bg-[#BFBABA] text-black text-xl font-semibold px-4 py-2 rounded-3xl flex items-center justify-center w-52 h-16 text-center overflow-hidden"
         style={{ whiteSpace: 'nowrap' }}
       >
         Connect Wallet

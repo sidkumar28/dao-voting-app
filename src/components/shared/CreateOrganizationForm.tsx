@@ -49,8 +49,8 @@ const CreateOrganizationDialog: React.FC = () => {
       
       <Button
         onClick={handleOpenDialog}
-        className="bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-500  text-white text-xl mb-6 px-4 py-2 rounded-3xl flex items-center justify-center w-64 h-16 text-center overflow-hidden"
-      >
+        className="bg-[#BFBABA] text-black text-xl mb-6 px-4 py-2 rounded-3xl flex items-center justify-center w-64 h-16 text-center overflow-hidden hover:bg-[#497CFF] hover:text-white"
+        >
         Create Organization
       </Button>
 

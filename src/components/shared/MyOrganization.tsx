@@ -9,15 +9,15 @@ interface Organization {
 }
 
 const adminOrganizations: Organization[] = [
-  { id: 1, name: 'Accelchain', logo: '/images/accelchain.jpeg' },
-  { id: 2, name: 'Microsoft', logo: '/images/microsoft.png' },
+  { id: 1, name: 'Accelchain', logo: '/images/accelchain.png' },
+  { id: 2, name: 'Microsoft', logo: '/images/Microsoftlogo.png' },
   { id: 3, name: 'Apple', logo: '/images/apple.png' },
 ];
 
 const memberOrganizations: Organization[] = [
   { id: 4, name: 'Reliance', logo: '/images/reliance.png' },
   { id: 5, name: 'Tata', logo: '/images/tata.png' },
-  { id: 6, name: 'MitAdt', logo: '/images/mitadt.jpeg' },
+  { id: 6, name: 'MitAdt', logo: '/images/mit.png' },
 ];
 
 const MyOrganizations: React.FC = () => {
@@ -32,68 +32,70 @@ const MyOrganizations: React.FC = () => {
       
       <CreateOrganizationDialog />
 
-      
       <div
         className="mb-10 p-6 rounded-lg border-2"
         style={{
-          background: 'linear-gradient(to bottom, #002d4d, #003d6b, #00557d)',
-          borderColor: '#00557d',
+          background: 'rgba(218, 216, 216, 0.11)',
+          borderColor: '#497CFF',
+          borderWidth: '2px', 
+          borderStyle: 'solid',
         }}
       >
-        <h2 className="text-2xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 text-center">
+        <h2 className="text-2xl font-bold mb-6 text-transparent bg-clip-text bg-[#BFBABA] text-center">
           Organizations You Admin
         </h2>
-        <div className="flex flex-wrap justify-center gap-8">
+        <div className="flex flex-wrap justify-center gap-6">
           {adminOrganizations.map((org) => (
             <div
               key={org.id}
               className="relative flex flex-col items-center shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-2xl group"
               style={{
-                width: '320px',
-                height: '300px',
-                background: 'linear-gradient(to bottom, #003d6b, #00557d)',
+                width: '300px',
+                height: '280px',
+                background: 'linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2))',
               }}
               onClick={handleOrgClick}
             >
-              <div className="relative w-full h-52 overflow-hidden">
-                <img src={org.logo} alt={org.name} className="w-full h-full object-cover" />
+              <div className="relative w-full h-3/4 overflow-hidden">
+                <img src={org.logo} alt={org.name} className="w-full h-full object-contain" />
               </div>
-              <div className="p-4 text-center">
-                <h2 className="text-lg font-semibold text-white">{org.name}</h2>
+              <div className="p-3 text-center">
+                <h2 className="text-md font-semibold text-white">{org.name}</h2>
               </div>
             </div>
           ))}
         </div>
       </div>
 
-      
       <div
         className="p-6 rounded-lg border-2"
         style={{
-          background: 'linear-gradient(to bottom, #004d70, #008793)',
-          borderColor: '#00557d',
+          background: 'rgba(218, 216, 216, 0.11)',
+          borderColor: '#B07AE9',
+          borderWidth: '2px', 
+          borderStyle: 'solid',
         }}
       >
-        <h2 className="text-2xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 text-center">
+        <h2 className="text-2xl font-bold mb-6 text-transparent bg-clip-text bg-[#BFBABA] text-center">
           Organizations You’re a Member Of
         </h2>
-        <div className="flex flex-wrap justify-center gap-8">
+        <div className="flex flex-wrap justify-center gap-6">
           {memberOrganizations.map((org) => (
             <div
               key={org.id}
               className="relative flex flex-col items-center shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-2xl group"
               style={{
-                width: '320px',
-                height: '300px',
-                background: 'linear-gradient(to bottom, #004d70, #008793)',
+                width: '300px',
+                height: '280px',
+                background: 'linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2))',
               }}
               onClick={handleOrgClick}
             >
-              <div className="relative w-full h-52 overflow-hidden">
-                <img src={org.logo} alt={org.name} className="w-full h-full object-cover" />
+              <div className="relative w-full h-3/4 overflow-hidden">
+                <img src={org.logo} alt={org.name} className="w-full h-full object-contain" />
               </div>
-              <div className="p-4 text-center">
-                <h2 className="text-lg font-semibold text-white">{org.name}</h2>
+              <div className="p-3 text-center">
+                <h2 className="text-md font-semibold text-white">{org.name}</h2>
               </div>
             </div>
           ))}

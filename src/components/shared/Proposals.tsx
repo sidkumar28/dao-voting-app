@@ -14,7 +14,7 @@ interface Proposal {
 const organization = {
   id: 1,
   name: 'Accelchain',
-  logo: '/images/accelchain.jpeg',
+  logo: '/images/accelchain.png',
 };
 
 const proposals: Proposal[] = [
@@ -32,6 +32,7 @@ const ProposalPage: React.FC = () => {
     setSelectedProposal(proposal);
     setDrawerOpen(true);
   };
+  
 
   const handleCreateProposalClick = () => {
     setDialogOpen(true);
@@ -41,35 +42,35 @@ const ProposalPage: React.FC = () => {
     <div className="min-h-screen p-8 text-white max-w-screen-xl mx-auto">
       <div className="mb-6">
         <button
-          className="bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-500 text-white text-xl px-4 py-2 rounded-3xl flex items-center justify-center w-52 h-16 text-center overflow-hidden"
-          onClick={handleCreateProposalClick}
+        className="bg-[#BFBABA] text-black text-xl font-semibold px-4 py-2 rounded-3xl flex items-center justify-center w-52 h-16 text-center overflow-hidden"
+        onClick={handleCreateProposalClick}
         >
           Create Proposal
         </button>
       </div>
 
       
-      <div className="flex items-start justify-between p-8 border-2 border-orange-400 rounded-lg bg-gradient-to-r from-[#001f3f] via-[#003366] to-[#00274d]">
+      <div className="flex items-start justify-between p-8 border-2 border-[#B07AE9] rounded-lg bg-gradient-to-r from-[#181D47] via-[#243465] to-[#2A174F]">
         <div className="w-1/2 pr-8">
           <img src="/images/concept.png" alt="Tech illustration" className="w-full h-auto rounded-lg shadow-lg" />
         </div>
-        <div className="border-l-2 border-[#00aaff]"></div>
+        
         <div className="w-1/2">
           <div className="flex items-center space-x-4 mb-8">
-            <img src={organization.logo} alt={organization.name} className="w-24 h-24 rounded-full shadow-lg" />
-            <h1 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600">
+            <img src={organization.logo} alt={organization.name} className="w-20  h-20" />
+            <h1 className="text-4xl font-bold text-transparent bg-clip-text bg-[#BFBABA]">
               {organization.name}
             </h1>
           </div>
           <div className="p-6 rounded-lg">
-            <h2 className="text-2xl font-semibold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600">
+            <h2 className="text-2xl font-semibold mb-6 text-transparent bg-clip-text bg-yellow-400">
               Proposals
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {proposals.map((proposal) => (
                 <div
                   key={proposal.id}
-                  className="relative bg-gradient-to-r from-[#004466] to-[#006699] p-4 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-pointer"
+                  className="relative bg-gradient-to-r from-[#181D47] to-[#2A174F] p-4 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 cursor-pointer"
                   onClick={() => handleProposalClick(proposal)}
                   >
                   <h3 className="text-xl font-semibold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">
